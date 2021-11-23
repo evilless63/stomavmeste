@@ -9,6 +9,8 @@ use App\Models\Employee;
 use App\Models\Report;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ClientSiteController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,9 +23,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('client.welcome');
-});
+//Route::get('/', function () {
+//    return view('client.welcome');
+//});
+
+Route::get('/', [ClientSiteController::class, 'index'])->name('index');
+Route::get('/help', [ClientSiteController::class, 'help'])->name('help');
+Route::get('/deals', [ClientSiteController::class, 'deals'])->name('deals');
+Route::get('/articles', [ClientSiteController::class, 'articles'])->name('articles');
+Route::get('/organisations', [ClientSiteController::class, 'organisations'])->name('organisations');
+Route::get('/about', [ClientSiteController::class, 'about'])->name('about');
+Route::get('/vacancy', [ClientSiteController::class, 'vacancy'])->name('vacancy');
+Route::get('/smi', [ClientSiteController::class, 'smi'])->name('smi');
 
 Route::prefix('manage')->middleware(['role:MANAGER, ADMIN', 'verified'])->group(function() {
     Route::get('/', function () {
@@ -115,6 +126,7 @@ Route::prefix('manage')->middleware(['role:MANAGER, ADMIN', 'verified'])->group(
     Route::post('/reports/store', [ReportController::class, 'store'])->name('manage.reports.store');
     Route::post('/articles/store', [ArticleController::class, 'store'])->name('manage.articles.store');
     Route::post('ckeditor/upload', [CKEditorController::class, 'upload'])->name('ckeditor.image-upload');
+
 });
 
 //Auth::routes(['verify' => true]);

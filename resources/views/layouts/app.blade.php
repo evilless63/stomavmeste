@@ -15,6 +15,7 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
+
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
@@ -37,10 +38,15 @@
     <script src="//cdn.ckeditor.com/4.16.2/full/ckeditor.js"></script>
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
-            CKEDITOR.replace('description', {
-                filebrowserUploadUrl: "{{route('ckeditor.image-upload', ['_token' => csrf_token() ])}}",
-                filebrowserUploadMethod: 'form'
-            });
+            let description = document.getElementById('description')
+
+            if( description != null ) {
+                CKEDITOR.replace('description', {
+                    filebrowserUploadUrl: "{{route('ckeditor.image-upload', ['_token' => csrf_token() ])}}",
+                    filebrowserUploadMethod: 'form'
+                });
+            }
+
         })
     </script>
 </html>
