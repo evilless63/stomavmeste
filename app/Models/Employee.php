@@ -10,16 +10,16 @@ class Employee extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name',
+        'title',
         'profile',
         'image',
         'showable'
     ];
 
     static public $inputsByEntity = [
-        'Фамилия Имя (Отчетсво)' => ['text' => 'name'],
-        'Деятельность (чем занимается)' => ['text' => 'profile'],
-        'Изображение' => ['file' => 'image'],
+        'Фамилия Имя (Отчетство) - обязательно (максимум 255 символов)' => ['text' => 'title'],
+        'Деятельность (чем занимается) - обязательно' => ['text' => 'profile'],
+        'Изображение (Поддерживаются форматы: PNG, JPG) - обязательно' => ['file' => 'image'],
         'Показывать сотрудника пользователям' => ['checkbox' => 'showable']
     ];
 }

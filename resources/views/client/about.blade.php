@@ -1,8 +1,6 @@
-<x-client-layout>
+<x-client-layout :entity="$entity">
     <div class="bg-white">
         <main>
-
-
             <div class="bg-white overflow-hidden">
                 <div class="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
                     <div class="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen"></div>
@@ -113,92 +111,128 @@
                             <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Команда</h2>
                         </div>
                         <ul class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
+                            @forelse($employees as $employee)
                             <li>
                                 <div class="space-y-4">
                                     <div class="aspect-w-3 aspect-h-2">
-                                        <img class="object-cover shadow-lg rounded-lg" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixqx=7qwKjEp7Xv&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
+                                        <img class="object-cover shadow-lg rounded-lg"
+                                             src="{{asset('images/employees/'. $employee->image)}}"
+                                             alt="{{$employee->title}}">
                                     </div>
 
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3>Как зовут сотрудника</h3>
-                                            <p class="text-blue-600">Должность сотрудника</p>
+                                            <h3>{{$employee->title}}</h3>
+                                            <p class="text-blue-600">{{$employee->profile}}</p>
                                         </div>
                                     </div>
                                 </div>
                             </li>
-                            <li>
-                                <div class="space-y-4">
-                                    <div class="aspect-w-3 aspect-h-2">
-                                        <img class="object-cover shadow-lg rounded-lg" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixqx=7qwKjEp7Xv&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
-                                    </div>
-
-                                    <div class="space-y-2">
-                                        <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3>Как зовут сотрудника</h3>
-                                            <p class="text-blue-600">Должность сотрудника</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="space-y-4">
-                                    <div class="aspect-w-3 aspect-h-2">
-                                        <img class="object-cover shadow-lg rounded-lg" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixqx=7qwKjEp7Xv&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
-                                    </div>
-
-                                    <div class="space-y-2">
-                                        <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3>Как зовут сотрудника</h3>
-                                            <p class="text-blue-600">Должность сотрудника</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="space-y-4">
-                                    <div class="aspect-w-3 aspect-h-2">
-                                        <img class="object-cover shadow-lg rounded-lg" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixqx=7qwKjEp7Xv&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
-                                    </div>
-
-                                    <div class="space-y-2">
-                                        <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3>Как зовут сотрудника</h3>
-                                            <p class="text-blue-600">Должность сотрудника</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="space-y-4">
-                                    <div class="aspect-w-3 aspect-h-2">
-                                        <img class="object-cover shadow-lg rounded-lg" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixqx=7qwKjEp7Xv&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
-                                    </div>
-
-                                    <div class="space-y-2">
-                                        <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3>Как зовут сотрудника</h3>
-                                            <p class="text-blue-600">Должность сотрудника</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="space-y-4">
-                                    <div class="aspect-w-3 aspect-h-2">
-                                        <img class="object-cover shadow-lg rounded-lg" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixqx=7qwKjEp7Xv&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
-                                    </div>
-
-                                    <div class="space-y-2">
-                                        <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3>Как зовут сотрудника</h3>
-                                            <p class="text-blue-600">Должность сотрудника</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <!-- More people... -->
+                            @empty
+                                <h3>
+                                    <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Информация о команде не указана</span>
+                                </h3>
+                            @endforelse
                         </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-16 bg-gray-50 overflow-hidden lg:py-24">
+                <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
+                    <svg class="hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4" width="404" height="784" fill="none" viewBox="0 0 404 784" aria-hidden="true">
+                        <defs>
+                            <pattern id="b1e6e422-73f8-40a6-b5d9-c8586e37e0e7" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                                <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                            </pattern>
+                        </defs>
+                        <rect width="404" height="784" fill="url(#b1e6e422-73f8-40a6-b5d9-c8586e37e0e7)" />
+                    </svg>
+
+                    <div class="relative">
+                        <h2 class="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                            Ежегодные отчеты
+                        </h2>
+                        <p class="mt-4 max-w-3xl mx-auto text-center text-xl text-gray-500">
+                            и уставные документы организации
+                        </p>
+                    </div>
+
+
+
+                    <svg class="hidden lg:block absolute right-full transform translate-x-1/2 translate-y-12" width="404" height="784" fill="none" viewBox="0 0 404 784" aria-hidden="true">
+                        <defs>
+                            <pattern id="64e643ad-2176-4f86-b3d7-f2c5da3b6a6d" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                                <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                            </pattern>
+                        </defs>
+                        <rect width="404" height="784" fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)" />
+                    </svg>
+
+                    <div class="relative mt-12">
+                        <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8">
+                            <div class="lg:col-start-1">
+
+                                <dl class="mt-10 space-y-7">
+                                    @forelse($reports as $report)
+                                        <div class="col-span-1 flex shadow-sm rounded-md">
+                                            <div class="flex-shrink-0 flex items-center justify-center w-16 bg-blue-600 text-white text-sm font-medium rounded-l-md">
+                                                <a href="{{asset('files/reports/'. $report->file)}}">
+                                                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
+                                                <div class="flex-1 px-4 py-4 text-sm truncate">
+                                                    <a href="#" class="text-gray-900 font-medium hover:text-gray-600">{{$report->title}}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @empty
+                                        <h3>
+                                            <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Не найдено отчетов</span>
+                                        </h3>
+                                    @endforelse
+                                </dl>
+                            </div>
+                            <div class="lg:col-start-2">
+
+                                <dl class="mt-10 space-y-7">
+                                    @forelse($documents as $document)
+                                        <div class="col-span-1 flex shadow-sm rounded-md">
+                                            <div class="flex-shrink-0 flex items-center justify-center w-16 bg-blue-600 text-white text-sm font-medium rounded-l-md">
+                                                <a href="{{asset('files/documents/'. $document->file)}}">
+                                                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
+                                                <div class="flex-1 px-4 py-4 text-sm truncate">
+                                                    <a href="#" class="text-gray-900 font-medium hover:text-gray-600">{{$document->title}}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @empty
+                                        <h3>
+                                            <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Не найдено документов</span>
+                                        </h3>
+                                    @endforelse
+                                </dl>
+                            </div>
+
+                            <div class="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
+                                <svg class="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden" width="784" height="404" fill="none" viewBox="0 0 784 404" aria-hidden="true">
+                                    <defs>
+                                        <pattern id="e80155a9-dfde-425a-b5ea-1f6fadd20131" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                                            <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                                        </pattern>
+                                    </defs>
+                                    <rect width="784" height="404" fill="url(#e80155a9-dfde-425a-b5ea-1f6fadd20131)" />
+                                </svg>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

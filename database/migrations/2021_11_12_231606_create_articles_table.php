@@ -18,9 +18,15 @@ class CreateArticlesTable extends Migration
             $table->timestamps();
             $table->string(config('services.sluggable.naming'), 255);
             $table->string(config('services.sluggable.slug'), 255);
+            $table->text('meta_title')->nullable();
+            $table->text('meta_keywords')->nullable();
+            $table->text('meta_description')->nullable();
             $table->text('description')->nullable();
+            $table->text('short_description')->nullable();
             $table->string('image', 255)->nullable();
             $table->boolean('showable')->default(false);
+            $table->enum('type', ['NEWS', 'PATIENT-INFO']);
+            $table->integer('sort_order')->default(0);
         });
     }
 

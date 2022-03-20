@@ -29,55 +29,46 @@
                                         </th>
                                         <th scope="col"
                                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                            Title
+                                            Редактировать
                                         </th>
                                         <th scope="col"
                                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                            Status
+                                            Видимость
                                         </th>
                                         <th scope="col"
                                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                            Role
-                                        </th>
-                                        <th scope="col" class="relative px-6 py-3">
-                                            <span class="sr-only">Edit</span>
+                                            Удалить
                                         </th>
                                     </tr>
                                     </thead>
-                                    <tbody class="bg-white divide-y divide-gray-200">
+                                    <tbody id="sortable-categories" class="bg-white divide-y divide-gray-200">
                                     @forelse($entity_model_collection as $item)
-                                        <tr>
+                                        <tr data-id="{{$item->id}}">
                                             <td class="px-6 py-4 whitespace-nowrap">
-                                                <div class="flex items-center">
-                                                    <div class="flex-shrink-0 h-10 w-10">
-                                                        <img class="h-10 w-10 rounded-full"
-                                                             src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
-                                                             alt="">
-                                                    </div>
-                                                    <div class="ml-4">
-                                                        <div class="text-sm font-medium text-gray-900">
-                                                            Jane Cooper
-                                                        </div>
-                                                        <div class="text-sm text-gray-500">
-                                                            jane.cooper@example.com
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                <div class="text-sm text-gray-900">{{$item->title}}</div>
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap">
-                                                <div class="text-sm text-gray-900">Regional Paradigm Technician</div>
-                                                <div class="text-sm text-gray-500">Optimization</div>
+                                                <a href="{{route('manage.'.$type.'.edit', $item->id)}}" class="text-indigo-600 hover:text-indigo-900">Перейти к редактированию</a>
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap">
-                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                                          {{$item->title}}
-                                        </span>
+
+                                                    @if($item->showable)
+                                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                                        Виден на сайте</span>
+                                                    @else
+                                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
+                                                    Не виден на сайте</span>
+                                                    @endif
+
                                             </td>
-                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                                Admin
-                                            </td>
-                                            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                                <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                            <td class="px-6 py-4 whitespace-nowrap">
+                                                <form method="POST" action="{{route('manage.'.$type.'.destroy', $item->id)}}">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
+                                                      Удалить
+                                                    </button>
+                                                </form>
                                             </td>
                                         </tr>
                                     @empty
@@ -97,6 +88,33 @@
             </div>
         </div>
     </div>
-    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        function updateToDatabaseCategory(idString) {
+            jQuery.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                }
+            });
+            jQuery.ajax({
+                url: '{{ route('manage.order', $type) }}',
+                method: 'POST',
+                data: {
+                    ids: idString
+                }
+            })
+        }
+        var targetGallery = jQuery('#sortable-categories')
+        targetGallery.sortable({
+            update: function(e, ui) {
+                var sortData = targetGallery.sortable('toArray', {
+                    attribute: 'data-id'
+                })
+                updateToDatabaseCategory(sortData.join(','))
+            }
+        })
+    </script>
 
 </x-app-layout>

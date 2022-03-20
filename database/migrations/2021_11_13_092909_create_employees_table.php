@@ -16,10 +16,11 @@ class CreateEmployeesTable extends Migration
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('name', 255)->default('Безымянный сотрудник');
+            $table->string('title', 255)->default('Безымянный сотрудник');
             $table->string('profile', 255)->default('без профессии');
             $table->boolean('showable')->default(false);
             $table->string('image', 255)->nullable();
+            $table->integer('sort_order')->default(0);
         });
     }
 

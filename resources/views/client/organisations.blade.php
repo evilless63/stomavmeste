@@ -1,4 +1,4 @@
-<x-client-layout>
+<x-client-layout :entity="$entity">
     <div class="bg-white">
         <main>
             <div class="relative py-16 bg-white overflow-hidden">

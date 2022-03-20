@@ -1,4 +1,4 @@
-<x-client-layout>
+<x-client-layout :entity="$entity">
     <div class="bg-white">
         <main>
 
@@ -30,71 +30,32 @@
                         </svg>
                         <div class="relative md:bg-white md:p-6">
                             <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+                                @forelse($links as $link)
                                 <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
                                     <div class="flex-shrink-0">
                                         <img class="h-48 w-full object-cover"
-                                             src="{{asset('images/foto-9.jpg')}}"
-                                             alt="">
+                                             src="{{asset('images/links/'. $link->image)}}"
+                                             alt="{{$link->info}}">
                                     </div>
                                     <div class="flex-1 bg-white p-6 flex flex-col justify-between">
                                         <div class="flex-1">
-                                            <p class="text-sm font-medium text-blue-600">
-                                                <a href="#" class="hover:underline">
-                                                    Статья в СМИ
-                                                </a>
-                                            </p>
-                                            <a href="#" class="block mt-2">
+                                            <a href="{{$link->link}}" class="block mt-2" target="_blank">
                                                 <p class="text-xl font-semibold text-gray-900">
-                                                    Описание статьи
+                                                    {{$link->title}}
                                                 </p>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                                    <div class="flex-shrink-0">
-                                        <img class="h-48 w-full object-cover"
-                                             src="{{asset('images/foto-9.jpg')}}"
-                                             alt="">
-                                    </div>
-                                    <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-                                        <div class="flex-1">
-                                            <p class="text-sm font-medium text-blue-600">
-                                                <a href="#" class="hover:underline">
-                                                    Статья в СМИ
-                                                </a>
-                                            </p>
-                                            <a href="#" class="block mt-2">
-                                                <p class="text-xl font-semibold text-gray-900">
-                                                    Описание статьи
-                                                </p>
-                                            </a>
-                                        </div>
-                                    </div>
+                                @if($loop->iteration % 3 == 0)
                                 </div>
-
-                                <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                                    <div class="flex-shrink-0">
-                                        <img class="h-48 w-full object-cover"
-                                             src="{{asset('images/foto-9.jpg')}}"
-                                             alt="">
-                                    </div>
-                                    <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-                                        <div class="flex-1">
-                                            <p class="text-sm font-medium text-blue-600">
-                                                <a href="#" class="hover:underline">
-                                                    Статья в СМИ
-                                                </a>
-                                            </p>
-                                            <a href="#" class="block mt-2">
-                                                <p class="text-xl font-semibold text-gray-900">
-                                                    Описание статьи
-                                                </p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+                                @endif
+                                @empty
+                                    <h3>
+                                        <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Новостей пока что нет</span>
+                                    </h3>
+                                @endforelse
                             </div>
                         </div>
                     </div>

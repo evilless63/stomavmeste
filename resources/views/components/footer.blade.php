@@ -32,6 +32,12 @@
                                     Новости
                                 </a>
                             </li>
+
+                            <li>
+                                <a href="{{route('patients')}}" class="text-base text-gray-500 hover:text-gray-900">
+                                    Пациентам
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <div class="mt-12 md:mt-0">
@@ -75,7 +81,7 @@
                 </div>
             </div>
             <div class="mt-12 xl:mt-0">
-                <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase" id="mailingHeader">
                     Оформите подписку
                 </h3>
                 <p class="mt-4 text-base text-gray-500">
@@ -85,7 +91,7 @@
                     <label for="emailAddress" class="sr-only">Email address</label>
                     <input type="email" name="emailAddress" id="emailAddress" autocomplete="email" required class="appearance-none min-w-0 w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:placeholder-gray-400" placeholder="Укажите ваш email">
                     <div class="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                        <button type="submit" class="w-full flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">
+                        <button id="mailing" class="w-full flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">
                             Подписаться
                         </button>
                     </div>

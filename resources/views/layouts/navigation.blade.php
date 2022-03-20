@@ -11,25 +11,60 @@
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('manage.index')" :active="request()->routeIs('manage.index')">
-                        {{ __('Управление') }}
-                    </x-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('manage.articles')" :active="request()->routeIs('manage.articles')">
+{{--                <div class="hidden space-x-8 sm:-my-px sm:ml-4 sm:flex">--}}
+{{--                    <x-admin-nav-link :href="route('manage.index')" :active="request()->routeIs('manage.index')">--}}
+{{--                        {{ __('Начальная') }}--}}
+{{--                    </x-admin-nav-link>--}}
+{{--                </div>--}}
+                <div class="hidden space-x-8 sm:-my-px sm:ml-4 sm:flex">
+                    <x-admin-nav-link :href="route('manage.articles.index')" :active="request()->routeIs('manage.articles.index')">
                         {{ __('Новости') }}
-                    </x-nav-link>
+                    </x-admin-nav-link>
                 </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('manage.reports')" :active="request()->routeIs('manage.reports')">
+                <div class="hidden space-x-8 sm:-my-px sm:ml-4 sm:flex">
+                    <x-admin-nav-link :href="route('manage.patient-infos')" :active="request()->routeIs('manage.patient-infos')">
+                        {{ __('Пациентам') }}
+                    </x-admin-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-4 sm:flex">
+                    <x-admin-nav-link :href="route('manage.links.index')" :active="request()->routeIs('manage.links.index')">
+                        {{ __('СМИ') }}
+                    </x-admin-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-4 sm:flex">
+                    <x-admin-nav-link :href="route('manage.reports')" :active="request()->routeIs('manage.reports')">
                         {{ __('Отчеты') }}
-                    </x-nav-link>
+                    </x-admin-nav-link>
                 </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('manage.employees')" :active="request()->routeIs('manage.employees')">
+                <div class="hidden space-x-8 sm:-my-px sm:ml-4 sm:flex">
+                    <x-admin-nav-link :href="route('manage.documents.index')" :active="request()->routeIs('manage.documents.index')">
+                        {{ __('Документы') }}
+                    </x-admin-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-4 sm:flex">
+                    <x-admin-nav-link :href="route('manage.banners.index')" :active="request()->routeIs('manage.banners.index')">
+                        {{ __('Баннеры') }}
+                    </x-admin-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-4 sm:flex">
+                    <x-admin-nav-link :href="route('manage.meta.all')" :active="request()->routeIs('manage.meta.all')">
+                        {{ __('Мета информация') }}
+                    </x-admin-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-4 sm:flex">
+                    <x-admin-nav-link :href="route('manage.employees.index')" :active="request()->routeIs('manage.employees.index')">
                         {{ __('Сотрудники') }}
-                    </x-nav-link>
+                    </x-admin-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-4 sm:flex">
+                    <x-admin-nav-link :href="route('manage.vacancies.index')" :active="request()->routeIs('manage.vacancies.index')">
+                        {{ __('Вакансии') }}
+                    </x-admin-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-4 sm:flex">
+                    <x-admin-nav-link :href="route('manage.emails.export')" :active="request()->routeIs('manage.emails.export')">
+                        {{ __('Экспорт Email') }}
+                    </x-admin-nav-link>
                 </div>
             </div>
 

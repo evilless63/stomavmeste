@@ -1,35 +1,61 @@
-<x-client-layout>
+<x-client-layout :entity="$entity">
     <div class="bg-white">
         <main>
-            <!-- Hero section -->
-            <div class="relative">
-                <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100"></div>
+{{--            <!-- Hero section -->--}}
+{{--            <div class="relative">--}}
+{{--                <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100"></div>--}}
 {{--                <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">--}}
-                <div class="mx-auto sm:px-6 lg:px-8">
-                    <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
-                        <div class="absolute inset-0">
-                            <img class="h-full w-full object-cover" src="{{asset('images/header-slider.jpg')}}" alt="People working on laptops">
-                            <div class="absolute inset-0 bg-gradient-to-r from-purple-800 to-indigo-700 mix-blend-multiply"></div>
-                        </div>
-                        <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
-                            <h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                                <span class="block text-white">Тут будет слайдер)))</span>
-                                <span class="block text-indigo-200">Тут будет слайдер)))</span>
-                            </h1>
-                            <p class="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">
-                                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
-                            </p>
-                            <div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
-                                <div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-                                    <a href="#" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8">
-                                        Сделать пожертование
-                                    </a>
+{{--                <div class="mx-auto sm:px-6 lg:px-8">--}}
+{{--                    <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">--}}
+{{--                        <div class="absolute inset-0">--}}
+{{--                            <img class="h-full w-full object-cover" src="{{asset('images/header-slider.jpg')}}" alt="People working on laptops">--}}
+{{--                            <div class="absolute inset-0 bg-gradient-to-r from-purple-800 to-indigo-700 mix-blend-multiply"></div>--}}
+{{--                        </div>--}}
+{{--                        <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">--}}
+{{--                            <h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">--}}
+{{--                                <span class="block text-white">Тут будет слайдер)))</span>--}}
+{{--                                <span class="block text-indigo-200">Тут будет слайдер)))</span>--}}
+{{--                            </h1>--}}
+{{--                            <p class="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">--}}
+{{--                                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.--}}
+{{--                            </p>--}}
+{{--                            <div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">--}}
+{{--                                <div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">--}}
+{{--                                    <a href="#" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8">--}}
+{{--                                        Сделать пожертование--}}
+{{--                                    </a>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+
+            <header>
+                <div class="owl-carousel owl-theme">
+                    @foreach($banners as $banner)
+                    <div class="item">
+                        <img src="{{asset('images/banners/'.$banner->image)}}" alt="{{$banner->title}}">
+                        <div class="cover">
+                            <div class="container">
+                                <div class="header-content">
+                                    <div class="line"></div>
+                                    <h2>{{ $banner->title_description }}</h2>
+                                    <h1>{{$banner->title}}</h1>
+                                    @if($banner->help_link)
+                                    <h4>
+                                        <a href="#" class="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">
+                                            Помочь
+                                        </a>
+                                    </h4>
+                                    @endif
                                 </div>
                             </div>
                         </div>
                     </div>
+                    @endforeach
                 </div>
-            </div>
+            </header>
 
             <!-- Logo Cloud -->
             <div class="bg-white">
@@ -136,7 +162,7 @@
                             <div class="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
                                 <p>
                                     <span class="block text-2xl font-bold text-white">80+</span>
-                                    <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Человек</span> lacus nibh integer quis.</span>
+                                    <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Человек</span>  опрошенных имеют пожизненную стому</span>
                                 </p>
 
                                 <p>
@@ -195,138 +221,33 @@
                     </h2>
 
                         <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+                            @forelse($articles as $article)
                             <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
                                 <div class="flex-shrink-0">
                                     <img class="h-48 w-full object-cover"
-                                         src="{{asset('images/foto-9.jpg')}}"
-                                         alt="">
+                                         src="{{asset('images/articles/'.$article->image)}}"
+                                         alt="{{$article->title}}">
                                 </div>
                                 <div class="flex-1 bg-white p-6 flex flex-col justify-between">
                                     <div class="flex-1">
                                         <p class="text-sm font-medium text-blue-600">
-                                            <a href="#" class="hover:underline">
-                                                Наименование новости
+                                            <a href="{{route('article', $article->slug)}}" class="hover:underline">
+                                                {{$article->title}}
                                             </a>
                                         </p>
-                                        <a href="#" class="block mt-2">
+                                        <a href="{{route('article', $article->slug)}}" class="block mt-2">
                                             <p class="text-xl font-semibold text-gray-900">
-                                                Краткое описание новости
+                                                {{mb_strimwidth($article->short_description, 0, 97, '...')}}
                                             </p>
                                         </a>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                                <div class="flex-shrink-0">
-                                    <img class="h-48 w-full object-cover"
-                                         src="{{asset('images/foto-9.jpg')}}"
-                                         alt="">
-                                </div>
-                                <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-                                    <div class="flex-1">
-                                        <p class="text-sm font-medium text-blue-600">
-                                            <a href="#" class="hover:underline">
-                                                Наименование новости
-                                            </a>
-                                        </p>
-                                        <a href="#" class="block mt-2">
-                                            <p class="text-xl font-semibold text-gray-900">
-                                                Краткое описание новости
-                                            </p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                                <div class="flex-shrink-0">
-                                    <img class="h-48 w-full object-cover"
-                                         src="{{asset('images/foto-9.jpg')}}"
-                                         alt="">
-                                </div>
-                                <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-                                    <div class="flex-1">
-                                        <p class="text-sm font-medium text-blue-600">
-                                            <a href="#" class="hover:underline">
-                                                Наименование новости
-                                            </a>
-                                        </p>
-                                        <a href="#" class="block mt-2">
-                                            <p class="text-xl font-semibold text-gray-900">
-                                                Краткое описание новости
-                                            </p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-                            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                                <div class="flex-shrink-0">
-                                    <img class="h-48 w-full object-cover"
-                                         src="{{asset('images/foto-9.jpg')}}"
-                                         alt="">
-                                </div>
-                                <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-                                    <div class="flex-1">
-                                        <p class="text-sm font-medium text-blue-600">
-                                            <a href="#" class="hover:underline">
-                                                Наименование новости
-                                            </a>
-                                        </p>
-                                        <a href="#" class="block mt-2">
-                                            <p class="text-xl font-semibold text-gray-900">
-                                                Краткое описание новости
-                                            </p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                                <div class="flex-shrink-0">
-                                    <img class="h-48 w-full object-cover"
-                                         src="{{asset('images/foto-9.jpg')}}"
-                                         alt="">
-                                </div>
-                                <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-                                    <div class="flex-1">
-                                        <p class="text-sm font-medium text-blue-600">
-                                            <a href="#" class="hover:underline">
-                                                Наименование новости
-                                            </a>
-                                        </p>
-                                        <a href="#" class="block mt-2">
-                                            <p class="text-xl font-semibold text-gray-900">
-                                                Краткое описание новости
-                                            </p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                                <div class="flex-shrink-0">
-                                    <img class="h-48 w-full object-cover"
-                                         src="{{asset('images/foto-9.jpg')}}"
-                                         alt="">
-                                </div>
-                                <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-                                    <div class="flex-1">
-                                        <p class="text-sm font-medium text-blue-600">
-                                            <a href="#" class="hover:underline">
-                                                Наименование новости
-                                            </a>
-                                        </p>
-                                        <a href="#" class="block mt-2">
-                                            <p class="text-xl font-semibold text-gray-900">
-                                                Краткое описание новости
-                                            </p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                            @empty
+                                <h3>
+                                    <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Новостей пока что нет</span>
+                                </h3>
+                            @endforelse
                         </div>
                     <a href="{{route('articles')}}"  class="mt-12 group relative w-full flex justify-center py-2 px-4 border border-transparent text-lg font-bold rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                         Смотреть все новости
@@ -339,7 +260,31 @@
             <!-- CTA Section -->
 
         </main>
-
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+        <script>
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                margin:10,
+                dots:false,
+                nav:true,
+                mouseDrag:false,
+                autoplay:true,
+                animateOut: 'slideOutUp',
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:1
+                    },
+                    1000:{
+                        items:1
+                    }
+                }
+            });
+        </script>
         <x-footer/>
     </div>
 </x-client-layout>
