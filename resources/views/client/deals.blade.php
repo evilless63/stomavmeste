@@ -12,9 +12,9 @@
                         <div class="text-base max-w-prose mx-auto lg:max-w-lg lg:ml-auto lg:mr-0">
 
                             <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900">Что мы делаем</h3>
-                            <h2 class="leading-6 mt-8 text-blue-600 font-semibold tracking-wide uppercase">Помощь техническими средствами реабилитации</h2>
+                            <h2 class="leading-7 mt-8 text-blue-600 font-semibold tracking-wide uppercase">Помощь техническими средствами реабилитации</h2>
                             <p class="mt-4 text-lg text-gray-500">Мы рады принять технические средства реабилитации и уходовые средства для передачи их нуждающимся. Если у вас скапливается экономия средств делитесь ими с нуждающимися. Если вам не подошли средства вы тоже их можете передать в «Стома Вместе» и мы обязательно найдем кому их передать.</p>
-                            <h3 class="leading-6 mt-8 text-blue-600 font-semibold tracking-wide uppercase">Формируем толерантное отношение общества</h3>
+                            <h3 class="leading-7 mt-8 text-blue-600 font-semibold tracking-wide uppercase">Формируем толерантное отношение общества</h3>
                             <div class="mt-4 prose prose-indigo text-gray-500">
                                 <p>Люди со стомой с непростой судьбой и тяжелыми заболеваниями, рассказывают о своем преодолении, о целях и своей повседневности, мотивируя слушателей не сдаваться и быть благодарными за все, что у них есть! Мы меняем мир «Вместе», ты с нами?</p>
                             </div>
