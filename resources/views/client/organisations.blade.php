@@ -33,7 +33,7 @@
                 <div class="relative px-4 sm:px-6 lg:px-8">
                     <div class="text-lg max-w-prose mx-auto">
                         <h1>
-                            <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Организациям</span>
+                            <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900">Организациям</span>
                         </h1>
                         <p class="mt-8 text-xl text-gray-500 leading-8">Проекты «Стома Вместе» направлены на комплексную поддержку людей со стомой имеющих и не имеющих инвалидность.</p>
                     </div>

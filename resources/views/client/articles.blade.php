@@ -6,7 +6,7 @@
         <div class="relative max-w-7xl mx-auto">
             <div class="text-lg max-w-prose mx-auto">
                 <h1>
-                    <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Новости</span>
+                    <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900">Новости</span>
                 </h1>
             </div>
             <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
@@ -38,7 +38,7 @@
                 @endif
                 @empty
                 <h3>
-                    <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Новостей пока что нет</span>
+                    <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900">Новостей пока что нет</span>
                 </h3>
                 @endforelse
 

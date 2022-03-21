@@ -8,7 +8,7 @@
                     <div class="relative z-10 mb-8 md:mb-2 md:px-6">
                         <div class="text-base max-w-prose lg:max-w-none">
                             <h2 class="leading-6 text-indigo-600 font-semibold tracking-wide uppercase">Вакансии</h2>
-                            <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Приглашаем стать частью команды «Стома Вместе»!</p>
+                            <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900">Приглашаем стать частью команды «Стома Вместе»!</p>
                         </div>
                     </div>
                     <div class="relative">
@@ -54,7 +54,7 @@
                                 </div>
                             @empty
                                 <h3>
-                                    <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Вакансий пока что нет</span>
+                                    <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900">Вакансий пока что нет</span>
                                 </h3>
                             @endforelse
                             <div class="mt-6 prose prose-indigo prose-lg text-gray-500 mt-12">

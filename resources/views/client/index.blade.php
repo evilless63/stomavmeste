@@ -62,7 +62,7 @@
                 <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
                     <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
                         <div>
-                            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                            <h2 class="text-3xl font-extrabold text-gray-900">
                                 Нас поддерживают
                             </h2>
                             <p class="mt-3 max-w-3xl text-lg text-gray-500">
@@ -245,7 +245,7 @@
                             </div>
                             @empty
                                 <h3>
-                                    <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Новостей пока что нет</span>
+                                    <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900">Новостей пока что нет</span>
                                 </h3>
                             @endforelse
                         </div>

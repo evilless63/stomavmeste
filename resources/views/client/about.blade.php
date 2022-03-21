@@ -6,7 +6,7 @@
                     <div class="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen"></div>
                     <div class="mx-auto text-lg max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
                         <div>
-                            <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">О нас</h3>
+                            <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900">О нас</h3>
                         </div>
                     </div>
                     <div class="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
@@ -60,7 +60,7 @@
 
                     <div class="relative lg:grid lg:grid-cols-3 lg:gap-x-8">
                         <div class="lg:col-span-1">
-                            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
                                 Цели
                             </h2>
                         </div>
@@ -108,7 +108,7 @@
                 <div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
                     <div class="space-y-12">
                         <div class="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
-                            <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Команда</h2>
+                            <h2 class="text-3xl font-extrabold tracking-tight">Команда</h2>
                         </div>
                         <ul class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
                             @forelse($employees as $employee)
@@ -130,7 +130,7 @@
                             </li>
                             @empty
                                 <h3>
-                                    <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Информация о команде не указана</span>
+                                    <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900">Информация о команде не указана</span>
                                 </h3>
                             @endforelse
                         </ul>
@@ -150,7 +150,7 @@
                     </svg>
 
                     <div class="relative">
-                        <h2 class="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                        <h2 class="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900">
                             Ежегодные отчеты
                         </h2>
                         <p class="mt-4 max-w-3xl mx-auto text-center text-xl text-gray-500">
@@ -191,7 +191,7 @@
                                         </div>
                                     @empty
                                         <h3>
-                                            <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Не найдено отчетов</span>
+                                            <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900">Не найдено отчетов</span>
                                         </h3>
                                     @endforelse
                                 </dl>
@@ -216,7 +216,7 @@
                                         </div>
                                     @empty
                                         <h3>
-                                            <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Не найдено документов</span>
+                                            <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900">Не найдено документов</span>
                                         </h3>
                                     @endforelse
                                 </dl>

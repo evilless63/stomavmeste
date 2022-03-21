@@ -8,7 +8,7 @@
                     <div class="relative z-10 mb-8 md:mb-2 md:px-6">
                         <div class="text-base max-w-prose lg:max-w-none">
                             <h2 class="leading-6 text-indigo-600 font-semibold tracking-wide uppercase">Пресса о нас</h2>
-                            <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Что говорят в СМИ о нас</p>
+                            <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900">Что говорят в СМИ о нас</p>
                         </div>
                     </div>
                     <div class="relative">
@@ -53,7 +53,7 @@
                                 @endif
                                 @empty
                                     <h3>
-                                        <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Новостей пока что нет</span>
+                                        <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900">Новостей пока что нет</span>
                                     </h3>
                                 @endforelse
                             </div>

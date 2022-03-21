@@ -6,7 +6,7 @@
                     <div class="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
                         <div class="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl">
                             <div>
-                                <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
+                                <h2 class="text-3xl tracking-tight font-extrabold text-gray-900">
                                     Пациентам
                                 </h2>
                                 <div class="mt-3 sm:mt-4 lg:grid lg:grid-cols-2 lg:gap-5 lg:items-center">
@@ -36,7 +36,7 @@
                                     </div>
                                 </div>
                                 @empty
-                                    <h3 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
+                                    <h3 class="text-3xl tracking-tight font-extrabold text-gray-900">
                                         Информации для пациентов пока что нет
                                     </h3>
                                 @endforelse
