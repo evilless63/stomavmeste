@@ -97,7 +97,6 @@ class EmployeeController extends Controller
      */
     public function update(Request $request, Employee $employee)
     {
-        $this->validateEmployee($request);
         $data = $request->all();
 
         if($request->hasFile('image')) {
@@ -106,6 +105,12 @@ class EmployeeController extends Controller
             $destinationPath = public_path().'/images/employees';
             $file->move($destinationPath,$fileName);
             $data['image'] = $fileName;
+        }
+
+        if($request->has('showable')) {
+            if($request->showable == 'on') {
+                $data['showable'] = '1';
+            }
         }
 
         $employee->update($data);

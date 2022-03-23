@@ -22,7 +22,7 @@
                             <div class="relative text-lg mx-auto max-w-prose lg:max-w-none">
                                 <figure>
                                     <div class="aspect-w-12 aspect-h-7 lg:aspect-none">
-                                        <img class="rounded-lg shadow-lg object-cover object-center" src="https://images.unsplash.com/photo-1546913199-55e06682967e?ixlib=rb-1.2.1&auto=format&fit=crop&crop=focalpoint&fp-x=.735&fp-y=.55&w=1184&h=1376&q=80" alt="Whitney leaning against a railing on a downtown street" width="1184" height="1376">
+                                        <img class="rounded-lg shadow-lg object-cover object-center" src="{{asset('images/o-nas.jpg')}}" alt="Whitney leaning against a railing on a downtown street" width="1184" height="1376">
                                     </div>
                                 </figure>
                             </div>

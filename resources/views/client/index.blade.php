@@ -1,36 +1,6 @@
 <x-client-layout :entity="$entity">
     <div class="bg-white">
         <main>
-{{--            <!-- Hero section -->--}}
-{{--            <div class="relative">--}}
-{{--                <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100"></div>--}}
-{{--                <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">--}}
-{{--                <div class="mx-auto sm:px-6 lg:px-8">--}}
-{{--                    <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">--}}
-{{--                        <div class="absolute inset-0">--}}
-{{--                            <img class="h-full w-full object-cover" src="{{asset('images/header-slider.jpg')}}" alt="People working on laptops">--}}
-{{--                            <div class="absolute inset-0 bg-gradient-to-r from-purple-800 to-indigo-700 mix-blend-multiply"></div>--}}
-{{--                        </div>--}}
-{{--                        <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">--}}
-{{--                            <h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">--}}
-{{--                                <span class="block text-white">Тут будет слайдер)))</span>--}}
-{{--                                <span class="block text-indigo-200">Тут будет слайдер)))</span>--}}
-{{--                            </h1>--}}
-{{--                            <p class="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">--}}
-{{--                                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.--}}
-{{--                            </p>--}}
-{{--                            <div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">--}}
-{{--                                <div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">--}}
-{{--                                    <a href="#" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8">--}}
-{{--                                        Сделать пожертование--}}
-{{--                                    </a>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-
             <header>
                 <div class="owl-carousel owl-theme">
                     @foreach($banners as $banner)
@@ -102,15 +72,16 @@
                             <div>
                                 <div class="mt-6">
                                     <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
-                                        Промо текст
+                                        КАК ВСЕ НАЧИНАЛОСЬ
                                     </h2>
+                                    <h3 class="text-3xl font-extrabold tracking-tight text-gray-900">Создание «Стома Вместе»</h3>
                                     <p class="mt-4 text-lg text-gray-500">
-                                        Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.
+                                        В, теперь уже далеком, 2012 году наш Исполнительный директор столкнулась с осложнениями вокруг илеостомы. Куда только не обращалась за помощью, но оказалось, что найти помощь и поддержку с подобным диагнозом не так-то просто. В итоге она попадает в ФГБУ «НМИЦ колопроктологии имени А.Н. Рыжих», где был кабинет стомированных, там ей и оказали квалифицированную помощь, а так же подобрали технические средства реабилитации. После операции по закрытию стомы Татьяна Борисова привезла в Самару новинки технических средств, которых не было в Самаре, для стомированных, передала их в Клиники СамГМУ, а после, не долго думая, поставила цель - создать доступную реабилитацию для стомированных. Так, с 2013 года, она с волонтером Надеждой Блохиной начали ходить по палатам Клиник, и рассказывать об уходе за стомой, раздавая брошюры и средства ухода за стомой на первое время, бесплатно. В 2016 году, благодаря помощи волонтеров: Дмитрия Кайорова, Надежды Блохиной и Милы Кадымовой, появился проект "Стома Вместе", направленный на информационную и психологическую поддержку стомированных. Проект существует и развивается по сей день, так же не без волонтерской помощи.
                                     </p>
                                     <div class="mt-6">
-                                        <a href="#" class="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">
-                                            Помочь
-                                        </a>
+{{--                                        <a href="#" class="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">--}}
+{{--                                            Помочь--}}
+{{--                                        </a>--}}
                                     </div>
                                 </div>
                             </div>
@@ -118,16 +89,16 @@
                                 <blockquote>
                                     <div>
                                         <p class="text-base text-gray-500">
-                                            &ldquo;Cras velit quis eros eget rhoncus lacus ultrices sed diam. Sit orci risus aenean curabitur donec aliquet. Mi venenatis in euismod ut.&rdquo;
+                                            &ldquo;Стома – не приговор, а стимул к новой жизни&rdquo;
                                         </p>
                                     </div>
                                     <footer class="mt-3">
                                         <div class="flex items-center space-x-3">
-                                            <div class="flex-shrink-0">
-                                                <img class="h-6 w-6 rounded-full" src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
-                                            </div>
+{{--                                            <div class="flex-shrink-0">--}}
+{{--                                                <img class="h-6 w-6 rounded-full" src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">--}}
+{{--                                            </div>--}}
                                             <div class="text-base font-medium text-gray-700">
-                                                Лидия ивановна, волонтер
+                                                Исполнительный директор – Татьяна Борисова
                                             </div>
                                         </div>
                                     </footer>
@@ -136,7 +107,7 @@
                         </div>
                         <div class="mt-12 sm:mt-16 lg:mt-0">
                             <div class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-                                <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none" src="{{asset('images/bg.jpg')}}" alt="Inbox user interface">
+                                <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none" src="{{asset('images/promo-1.jpg')}}" alt="Inbox user interface">
                             </div>
                         </div>
                     </div>
@@ -147,7 +118,7 @@
                     <div class="h-80 absolute inset-x-0 bottom-0 xl:top-0 xl:h-full">
                         <div class="h-full w-full xl:grid xl:grid-cols-2">
                             <div class="h-full xl:relative xl:col-start-2">
-                                <img class="h-full w-full object-cover opacity-25 xl:absolute xl:inset-0" src="{{asset('images/foto-9.jpg')}}" alt="People working on laptops">
+                                <img class="h-full w-full object-cover opacity-25 xl:absolute xl:inset-0" src="{{asset('images/metrika.jpg')}}" alt="People working on laptops">
                                 <div aria-hidden="true" class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-gray-900 xl:inset-y-0 xl:left-0 xl:h-full xl:w-32 xl:bg-gradient-to-r"></div>
                             </div>
                         </div>
@@ -155,29 +126,29 @@
                     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
                         <div class="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
                             <h2 class="text-sm font-semibold tracking-wide uppercase">
-                                <span class="bg-gradient-to-r from-purple-300 to-indigo-300 bg-clip-text text-transparent">Промо (метрика достижений)</span>
+                                <span class="bg-gradient-to-r from-purple-300 to-indigo-300 bg-clip-text text-transparent">Метрика достижений</span>
                             </h2>
-                            <p class="mt-3 text-3xl font-extrabold text-white">Rhoncus sagittis risus arcu erat lectu</p>
-                            <p class="mt-5 text-lg text-gray-300">Rhoncus sagittis risus arcu erat lectus bibendum. Ut in adipiscing quis in viverra tristique sem. Ornare feugiat viverra eleifend fusce orci in quis amet. Sit in et vitae tortor, massa. Dapibus laoreet amet lacus nibh integer quis. Eu vulputate diam sit tellus quis at.</p>
+                            <p class="mt-3 text-3xl font-extrabold text-white">Метрика достижений</p>
+                            <p class="mt-5 text-lg text-gray-300">Взаимопомощь - это одна из главных составляющих хорошей реабилитации людей после сложной операции на жизненно важных органах.</p>
                             <div class="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
                                 <p>
-                                    <span class="block text-2xl font-bold text-white">80+</span>
-                                    <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Человек</span>  опрошенных имеют пожизненную стому</span>
+                                    <span class="block text-2xl font-bold text-white">457+</span>
+                                    <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Человек</span> получили специализированные средства бесплатно.</span>
                                 </p>
 
                                 <p>
-                                    <span class="block text-2xl font-bold text-white">25K+</span>
-                                    <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Человек</span> lacus nibh integer quis.</span>
+                                    <span class="block text-2xl font-bold text-white">3285+</span>
+                                    <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Рекомендаций</span> было сделано в чатах поддержки.</span>
                                 </p>
 
                                 <p>
-                                    <span class="block text-2xl font-bold text-white">98%</span>
-                                    <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Человек</span> laoreet amet lacus nibh integer quis.</span>
+                                    <span class="block text-2xl font-bold text-white">42+</span>
+                                    <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Региона</span> - география обращений за помощью.</span>
                                 </p>
 
                                 <p>
-                                    <span class="block text-2xl font-bold text-white">12M+</span>
-                                    <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Человек</span> lacus nibh integer quis.</span>
+                                    <span class="block text-2xl font-bold text-white">2+</span>
+                                    <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Человека</span> в данный момент получают помощь профессионального психолога.</span>
                                 </p>
                             </div>
                         </div>
@@ -189,14 +160,20 @@
                             <div>
                                 <div class="mt-6">
                                     <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
-                                        Промо текст
+                                        Помогать легко, если знаешь чем и как помочь
                                     </h2>
                                     <p class="mt-4 text-lg text-gray-500">
-                                        Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.
+                                        Наш проект создан не просто так, ведь мы прекрасно знаем, что стомированные люди очень нуждаются в помощи. Особенно в первое время после операции. Мир переворачивается с ног на голову, учишься жить иначе. Помощь, зачастую, нужна абсолютно любая, будь-то совет людей, кто все это уже прошел, и научился жить по-новому, радуясь каждому дню, будь-то подсказки по уходу за стомой, или помощь в приобретении средств реабилитации.
+                                    </p>
+                                    <p class="mt-4 text-lg text-gray-500">
+                                        К нам обращаются с абсолютно разными вопросами, и не только стомированные пациенты, но и их родственники. Мы всегда рады помочь, по мере возможности!
+                                    </p>
+                                    <p class="mt-4 text-lg text-gray-500">
+                                        Если вы стомированный и нуждаетесь в помощи, то можете написать ниже свои координаты.
                                     </p>
                                     <div class="mt-6">
                                         <a href="#" class="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">
-                                            Помочь
+                                            Получить помощь
                                         </a>
                                     </div>
                                 </div>

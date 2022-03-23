@@ -1,28 +1,30 @@
 <x-client-layout :entity="$entity">
     <div class="bg-white">
         <main>
-            <!-- Hero section -->
-            <div class="relative">
-                <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
-                    <div class="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
-                        <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-                            <span class="block xl:inline">Помочь</span>
-                            <span class="block text-blue-600 xl:inline">сейчас</span>
-                        </h1>
-                        <p class="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
-                            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
-                        </p>
-                        <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
-                            <div class="rounded-md shadow">
-                                <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
-                                    Сделать пожертование
-                                </a>
+            <div class="mt-24">
+                <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+                    <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
+                        <div>
+                            <div class="mt-6">
+                                <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
+                                    Помощь
+                                </h2>
+                                <p class="mt-4 text-lg text-gray-500">
+                                    Когда индивид сталкивается с необходимостью выведения стомы, это может очень дестабилизировать, выбить из привычного уклада жизни. Человек сталкивается с неизвестностью, страхами, финансовыми и другими сложностями. Справиться с таким в одиночку очень сложно. Хорошо, когда есть рядом близкие люди, друзья, но они так же сталкиваются с этим впервые и не знают, что делать. В такие моменты стомированному очень важно узнать, что он не одинок и есть люди, которые преодолели подобное. А еще важнее знать, что есть люди готовые помочь. Ощущение единения очень помогает морально и эмоционально, даёт ресурс справиться со сложной ситуацией. Мы с гордостью можем утверждать, что «Стома Вместе» является таким ресурсным пространством!
+                                </p>
+                                <div class="mt-6">
+                                    <a href="#" class="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">
+                                        Сделать пожертование
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
-                    <img class="absolute inset-0 w-full h-full object-cover" src="{{asset('images/foto-9.jpg')}}" alt="">
+                    <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
+                        <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                            <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none" src="{{asset('images/help.jpg')}}" alt="Customer profile user interface">
+                        </div>
+                    </div>
                 </div>
             </div>
 
