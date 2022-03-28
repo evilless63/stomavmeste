@@ -21,8 +21,8 @@
                         </div>
                     </div>
                     <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
-                        <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-                            <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none" src="{{asset('images/help.jpg')}}" alt="Customer profile user interface">
+                        <div class="pl-4 lg:-mr-48 mr-4 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                            <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:w-auto lg:max-w-none" src="{{asset('images/help.jpg')}}" alt="Customer profile user interface">
                         </div>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                             <div class="relative text-base mx-auto max-w-prose lg:max-w-none">
                                 <figure>
                                     <div class="aspect-w-12 aspect-h-7 lg:aspect-none">
-                                        <img class="rounded-lg shadow-lg object-cover object-center" src="https://images.unsplash.com/photo-1546913199-55e06682967e?ixlib=rb-1.2.1&auto=format&fit=crop&crop=focalpoint&fp-x=.735&fp-y=.55&w=1184&h=1376&q=80" alt="Whitney leaning against a railing on a downtown street" width="1184" height="1376">
+                                        <img class="rounded-lg shadow-lg object-cover object-center" src="{{asset('images/stat_drygom.jpg')}}" alt="" width="1184" height="1376">
                                     </div>
                                 </figure>
                             </div>

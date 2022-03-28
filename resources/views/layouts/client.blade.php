@@ -39,5 +39,19 @@
             </main>
         </div>
     </body>
+    <script>
+        // Grab HTML Elements
+        const normalBtn= document.getElementById("user-menu-button");
+        const mobileBtn= document.getElementById("mobile-menu-button-toggled")
+        const menu = document.getElementById("mobile-menu");
 
+        // Add Event Listeners
+        normalBtn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+        mobileBtn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+
+    </script>
 </html>

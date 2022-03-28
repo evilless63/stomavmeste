@@ -5,7 +5,7 @@
 
             <div class="py-16 xl:py-36 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
                 <div class="max-w-max lg:max-w-7xl mx-auto">
-                    <div class="relative z-10 mb-8 md:mb-2 md:px-6">
+                    <div class="relative mb-8 md:mb-2 md:px-6">
                         <div class="text-base max-w-prose lg:max-w-none">
                             <h2 class="leading-6 text-indigo-600 font-semibold tracking-wide uppercase">Вакансии</h2>
                             <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900">Приглашаем стать частью команды «Стома Вместе»!</p>

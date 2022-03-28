@@ -67,7 +67,7 @@
             <div class="relative pt-16 overflow-hidden">
                 <div aria-hidden="true" class="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-gray-100"></div>
                 <div class="relative">
-                    <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+                    <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense">
                         <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
                             <div>
                                 <div class="mt-6">
@@ -106,8 +106,8 @@
                             </div>
                         </div>
                         <div class="mt-12 sm:mt-16 lg:mt-0">
-                            <div class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-                                <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none" src="{{asset('images/promo-1.jpg')}}" alt="Inbox user interface">
+                            <div class="pl-4 lg:-mr-48 mr-4 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                                <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:w-auto lg:max-w-none" src="{{asset('images/promo-1.jpg')}}" alt="Inbox user interface">
                             </div>
                         </div>
                     </div>
@@ -118,8 +118,8 @@
                     <div class="h-80 absolute inset-x-0 bottom-0 xl:top-0 xl:h-full">
                         <div class="h-full w-full xl:grid xl:grid-cols-2">
                             <div class="h-full xl:relative xl:col-start-2">
-                                <img class="h-full w-full object-cover opacity-25 xl:absolute xl:inset-0" src="{{asset('images/metrika.jpg')}}" alt="People working on laptops">
-                                <div aria-hidden="true" class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-gray-900 xl:inset-y-0 xl:left-0 xl:h-full xl:w-32 xl:bg-gradient-to-r"></div>
+                                <img class=" w-full object-cover opacity-25 xl:absolute xl:inset-0" src="{{asset('images/metrika.jpg')}}" alt="People working on laptops">
+                                <div aria-hidden="true" class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-gray-900 xl:inset-y-0 xl:left-0 xl:w-32 xl:bg-gradient-to-r"></div>
                             </div>
                         </div>
                     </div>
@@ -155,10 +155,10 @@
                     </div>
                 </div>
                 <div class="mt-24">
-                    <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
-                        <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
+                    <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense">
+                        <div class="px-4 max-w-xl mx-auto sm:px-6 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
                             <div>
-                                <div class="mt-6">
+                                <div class="">
                                     <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
                                         Помогать легко, если знаешь чем и как помочь
                                     </h2>
@@ -180,8 +180,8 @@
                             </div>
                         </div>
                         <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
-                            <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-                                <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none" src="{{asset('images/bg.jpg')}}" alt="Customer profile user interface">
+                            <div class="lg:pr-4 lg:ml-20 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                                <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:w-auto" src="{{asset('images/contacts_index.jpg')}}" alt="Customer profile user interface">
                             </div>
                         </div>
                     </div>
@@ -239,7 +239,7 @@
         </main>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js'></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js'></script>
         <script>
             $('.owl-carousel').owlCarousel({
                 loop:true,
