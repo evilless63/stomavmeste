@@ -172,9 +172,77 @@
                                         Если вы стомированный и нуждаетесь в помощи, то можете написать ниже свои координаты.
                                     </p>
                                     <div class="mt-6">
-                                        <a href="#" class="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">
-                                            Получить помощь
-                                        </a>
+{{--                                        <a href="#" class="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">--}}
+{{--                                            Получить помощь--}}
+{{--                                        </a>--}}
+                                        <div>
+                                            <button id="mail-button" class="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">
+                                                <span>Получить помощь</span>
+                                            </button>
+
+                                            <div id="mail-block" class="fixed inset-0 z-50 overflow-y-auto hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+                                                <div class="flex items-end justify-center min-h-screen px-4 text-center md:items-center sm:block sm:p-0">
+                                                    <div
+                                                         x-transition:enter="transition ease-out duration-300 transform"
+                                                         x-transition:enter-start="opacity-0"
+                                                         x-transition:enter-end="opacity-100"
+                                                         x-transition:leave="transition ease-in duration-200 transform"
+                                                         x-transition:leave-start="opacity-100"
+                                                         x-transition:leave-end="opacity-0"
+                                                         class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-40 " aria-hidden="true"
+                                                    ></div>
+
+                                                    <div
+                                                         x-transition:enter="transition ease-out duration-300 transform"
+                                                         x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                                                         x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                                                         x-transition:leave="transition ease-in duration-200 transform"
+                                                         x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+                                                         x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                                                         class="inline-block w-full max-w-xl p-8 mt-20 mb-40 overflow-hidden text-left transition-all transform bg-white rounded-lg shadow-xl 2xl:max-w-2xl"
+                                                    >
+                                                        <div class="flex items-center justify-between space-x-4">
+                                                            <h1 class="text-xl font-medium text-gray-800 ">Получить помощь</h1>
+
+                                                            <button  id="close-mail-button" class="text-gray-600 focus:outline-none hover:text-gray-700">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+
+                                                        <p class="mt-2 text-sm text-gray-500 ">
+                                                            Вы можете написать нам и вместе мы найдем решение
+                                                        </p>
+
+                                                        <form class="mt-2">
+                                                            <div>
+                                                                <label for="user name" class="block text-sm text-gray-700 capitalize dark:text-gray-200">Как к вам обращаться</label>
+                                                                <input placeholder="Фамилия Имя" type="text" class="block w-full px-3 py-2 mt-2 text-gray-600 placeholder-gray-400 bg-white border border-gray-200 rounded-md focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40">
+                                                            </div>
+
+                                                            <div class="mt-4">
+                                                                <label for="email" class="block text-sm text-gray-700 capitalize dark:text-gray-200">Ваши контакты, как с вами связаться</label>
+                                                                <input placeholder="Телефон или другой способ связи" type="text" class="block w-full px-3 py-2 mt-2 text-gray-600 placeholder-gray-400 bg-white border border-gray-200 rounded-md focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40">
+                                                            </div>
+
+                                                            <div class="mt-4">
+                                                                <label for="about" class="block text-sm font-medium text-gray-700">Опишите вашу ситуацию</label>
+                                                                <div class="mt-1">
+                                                                    <textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="Начните писать..."></textarea>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="flex justify-end mt-6">
+                                                                <button type="button" id="close-mail-button-send" class="px-3 py-2 text-sm tracking-wide text-white capitalize transition-colors duration-200 transform bg-indigo-500 rounded-md dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:bg-indigo-700 hover:bg-indigo-600 focus:outline-none focus:bg-indigo-500 focus:ring focus:ring-indigo-300 focus:ring-opacity-50">
+                                                                    Отправить письмо
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -261,6 +329,25 @@
                     }
                 }
             });
+        </script>
+
+        <script>
+            // Grab HTML Elements
+            const mailBtn= document.getElementById("mail-button");
+            const closeMailBtn= document.getElementById("close-mail-button")
+            const mailBlock = document.getElementById("mail-block");
+            const sendBtn = document.getElementById("close-mail-button-send")
+
+            // Add Event Listeners
+            mailBtn.addEventListener("click", () => {
+                mailBlock.classList.toggle("hidden");
+            });
+            closeMailBtn.addEventListener("click", () => {
+                mailBlock.classList.toggle("hidden");
+            });
+            sendBtn.addEventListener("click", () => {
+                mailBlock.classList.toggle("hidden");
+            })
         </script>
         <x-footer/>
     </div>

@@ -52,6 +52,5 @@
         mobileBtn.addEventListener("click", () => {
             menu.classList.toggle("hidden");
         });
-
     </script>
 </html>
