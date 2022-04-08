@@ -23,7 +23,7 @@ jQuery(document).ready(function($){
                 jQuery('#emailAddress').val('')
             },
             error: function (data) {
-                console.log(data)
+                console.log(data.errors)
                 $('#mailingHeader').html(data.responseText)
                 jQuery('#emailAddress').val('')
             }

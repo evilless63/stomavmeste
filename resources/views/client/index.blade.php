@@ -33,31 +33,38 @@
                     <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
                         <div>
                             <h2 class="text-3xl font-extrabold text-gray-900">
-                                Нас поддерживают
+                                Статистика
                             </h2>
                             <p class="mt-3 max-w-3xl text-lg text-gray-500">
-                               Многие компании откликнулись на наш призыв о помощи, вот некоторые из них
+                                На протяжении последних 2х лет мы проводили опросы, и вот небольшая статистика по ним:
                             </p>
                         </div>
                         <div class="mt-8 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
                             <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-                                <img class="max-h-12" src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg" alt="Workcation">
+                                <p>
+                                    <span class="block text-2xl font-bold text-gray-900">60%</span>
+                                    <span class="mt-1 block text-base text-gray-900"><span class="font-medium text-gray-900">Опрошенных</span> имеют пожизненную стому.</span>
+                                </p>
                             </div>
                             <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-                                <img class="max-h-12" src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg" alt="Mirage">
+                                <p>
+                                    <span class="block text-2xl font-bold text-gray-900">76%</span>
+                                    <span class="mt-1 block text-base text-gray-900"><span class="font-medium text-gray-900">Опрошенных</span> сталкивались с проблемами после операции.</span>
+                                </p>
                             </div>
                             <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-                                <img class="max-h-12" src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg" alt="Tuple">
+                                <p>
+                                    <span class="block text-2xl font-bold text-gray-900">31%</span>
+                                    <span class="mt-1 block text-base text-gray-900"><span class="font-medium text-gray-900">Опрошенных</span> опрошенных стомированных были проинформированы куда обращаться по вопросам реабилитации.</span>
+                                </p>
                             </div>
                             <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-                                <img class="max-h-12" src="https://tailwindui.com/img/logos/laravel-logo-gray-400.svg" alt="Laravel">
+                                <p>
+                                    <span class="block text-2xl font-bold text-gray-900">47%</span>
+                                    <span class="mt-1 block text-base text-gray-900"><span class="font-medium text-gray-900">Опрошенных</span> опрошенных признались, что стома влияет на психологическое состояние.</span>
+                                </p>
                             </div>
-                            <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-                                <img class="max-h-12" src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg" alt="StaticKit">
-                            </div>
-                            <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-                                <img class="max-h-12" src="https://tailwindui.com/img/logos/statamic-logo-gray-400.svg" alt="Statamic">
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -211,25 +218,25 @@
                                                             </button>
                                                         </div>
 
-                                                        <p class="mt-2 text-sm text-gray-500 ">
+                                                        <p class="mt-2 text-sm text-gray-500 " id="helpResult">
                                                             Вы можете написать нам и вместе мы найдем решение
                                                         </p>
 
                                                         <form class="mt-2">
                                                             <div>
                                                                 <label for="user name" class="block text-sm text-gray-700 capitalize dark:text-gray-200">Как к вам обращаться</label>
-                                                                <input placeholder="Фамилия Имя" type="text" class="block w-full px-3 py-2 mt-2 text-gray-600 placeholder-gray-400 bg-white border border-gray-200 rounded-md focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40">
+                                                                <input required id="helpName" placeholder="Фамилия Имя" type="text" class="block w-full px-3 py-2 mt-2 text-gray-600 placeholder-gray-400 bg-white border border-gray-200 rounded-md focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40">
                                                             </div>
 
                                                             <div class="mt-4">
                                                                 <label for="email" class="block text-sm text-gray-700 capitalize dark:text-gray-200">Ваши контакты, как с вами связаться</label>
-                                                                <input placeholder="Телефон или другой способ связи" type="text" class="block w-full px-3 py-2 mt-2 text-gray-600 placeholder-gray-400 bg-white border border-gray-200 rounded-md focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40">
+                                                                <input required id="helpPhone" placeholder="Телефон или другой способ связи" type="text" class="block w-full px-3 py-2 mt-2 text-gray-600 placeholder-gray-400 bg-white border border-gray-200 rounded-md focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40">
                                                             </div>
 
                                                             <div class="mt-4">
                                                                 <label for="about" class="block text-sm font-medium text-gray-700">Опишите вашу ситуацию</label>
                                                                 <div class="mt-1">
-                                                                    <textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="Начните писать..."></textarea>
+                                                                    <textarea required id="helpAbout" name="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="Начните писать..."></textarea>
                                                                 </div>
                                                             </div>
 
@@ -336,7 +343,8 @@
             const mailBtn= document.getElementById("mail-button");
             const closeMailBtn= document.getElementById("close-mail-button")
             const mailBlock = document.getElementById("mail-block");
-            const sendBtn = document.getElementById("close-mail-button-send")
+            const resultBlock = document.getElementById("helpResult");
+            // const sendBtn = document.getElementById("close-mail-button-send")
 
             // Add Event Listeners
             mailBtn.addEventListener("click", () => {
@@ -344,10 +352,11 @@
             });
             closeMailBtn.addEventListener("click", () => {
                 mailBlock.classList.toggle("hidden");
+                resultBlock.innerHTML = 'Вы можете написать нам и вместе мы найдем решение'
             });
-            sendBtn.addEventListener("click", () => {
-                mailBlock.classList.toggle("hidden");
-            })
+            // sendBtn.addEventListener("click", () => {
+            //     mailBlock.classList.toggle("hidden");
+            // })
         </script>
         <x-footer/>
     </div>

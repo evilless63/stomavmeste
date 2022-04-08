@@ -5,6 +5,7 @@ use App\Http\Controllers\BannerController;
 use App\Http\Controllers\CKEditorController;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\HelpController;
 use App\Http\Controllers\LinkController;
 use App\Http\Controllers\MailingController;
 use App\Http\Controllers\MetaController;
@@ -41,12 +42,14 @@ Route::get('/smi', [ClientSiteController::class, 'smi'])->name('smi');
 Route::get('/patients', [ClientSiteController::class, 'patients'])->name('patients');
 Route::get('/articles/{slug}', [ClientSiteController::class, 'article'])->name('article');
 Route::post('/emails/store', [MailingController::class, 'store' ])->name('emails.store');
+Route::post('/help/store', [HelpController::class, 'store' ])->name('help.store');
 
 Route::prefix('manage')->middleware(['role:MANAGER,ADMIN', 'verified'])->group(function() {
     Route::get('/', function () {
         return view('manage.index');
     })->name('manage.index');
     Route::get('/emails/export/', [MailingController::class, 'export' ])->name('manage.emails.export');
+    Route::get('/helps/export/', [HelpController::class, 'export' ])->name('manage.helps.export');
     Route::resource('/articles', ArticleController::class, ['as' => 'manage']);
     Route::get('/patient-infos', [ArticleController::class, 'patientInfosIndex'])->name('manage.patient-infos');
     Route::resource('/documents', DocumentController::class, ['as' => 'manage']);

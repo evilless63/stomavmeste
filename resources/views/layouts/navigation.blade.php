@@ -66,6 +66,11 @@
                         {{ __('Экспорт Email') }}
                     </x-admin-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-4 sm:flex">
+                    <x-admin-nav-link :href="route('manage.helps.export')" :active="request()->routeIs('manage.helps.export')">
+                        {{ __('Экспорт сообщений') }}
+                    </x-admin-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->

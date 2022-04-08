@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Mailing;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
+use App\Exports\HelpsExport;
 use App\Exports\MailingExport;
+use App\Models\Help;
+use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 
-class MailingController extends Controller
+class HelpController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -38,36 +38,34 @@ class MailingController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->validate([
-            'email' => 'required|email|unique:mailings',
-        ],
-            [
-                'email.required'=> 'Вы отправили пустое поле',
-                'email.email'=> 'Введенная строка не является почтой',
-                'email.unique'=> 'Такая почта уже указана в рассылке'
-            ]
-        );
+        $request->validate([
+            'phone' => 'required|string',
+            'message' => 'required|string',
+            'name' => 'required|string',
+        ], [
+            'phone.required' => 'Необходимо указать телефон или другой способ для связи',
+            'message.required' => 'Необходимо указать текст сообщения',
+            'name.required' => 'Укажите, как к вам обращаться'
+        ]);
 
-        if(Mailing::create($data)) {
-            return "Адрес успешно добавлен в рассылку!";
+        if(Help::create($request->all())) {
+            return "<h5>Ваше сообщение успешно отправлено! Можно закрыть окно</h5>";
         } else {
-            return "При добавлении адреса возникли проблемы!";
+            return "При отправке сообщения возникли проблемы!";
         }
     }
-
-
     public function export(): \Symfony\Component\HttpFoundation\BinaryFileResponse
     {
-        return Excel::download(new MailingExport, 'user_emails.xlsx');
+        return Excel::download(new HelpsExport(), 'help_messages.xlsx');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Mailing  $mailing
+     * @param  \App\Models\Help  $help
      * @return \Illuminate\Http\Response
      */
-    public function show(Mailing $mailing)
+    public function show(Help $help)
     {
         //
     }
@@ -75,10 +73,10 @@ class MailingController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Mailing  $mailing
+     * @param  \App\Models\Help  $help
      * @return \Illuminate\Http\Response
      */
-    public function edit(Mailing $mailing)
+    public function edit(Help $help)
     {
         //
     }
@@ -87,10 +85,10 @@ class MailingController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Mailing  $mailing
+     * @param  \App\Models\Help  $help
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Mailing $mailing)
+    public function update(Request $request, Help $help)
     {
         //
     }
@@ -98,10 +96,10 @@ class MailingController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Mailing  $mailing
+     * @param  \App\Models\Help  $help
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Mailing $mailing)
+    public function destroy(Help $help)
     {
         //
     }
