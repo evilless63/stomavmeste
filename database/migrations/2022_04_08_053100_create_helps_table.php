@@ -16,8 +16,8 @@ class CreateHelpsTable extends Migration
         Schema::create('helps', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('name')->nullable();
-            $table->string('phone')->nullable();
+            $table->string('name');
+            $table->string('phone');
             $table->text('message')->nullable();
 
         });

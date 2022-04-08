@@ -28,7 +28,7 @@ jQuery(document).ready(function($){
             },
             error: function (data) {
                 console.log(data.errors)
-                $('#helpResult').html('<h5>Ваше сообщение успешно отправлено! Можно закрыть окно</h5>')
+                $('#helpResult').html(data.responseText)
                 jQuery('#helpName').val('')
                 jQuery('#helpPhone').val('')
                 jQuery('#helpAbout').val('')

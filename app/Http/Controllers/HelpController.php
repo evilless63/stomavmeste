@@ -38,20 +38,31 @@ class HelpController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'phone' => 'required|string',
-            'message' => 'required|string',
-            'name' => 'required|string',
-        ], [
-            'phone.required' => 'Необходимо указать телефон или другой способ для связи',
-            'message.required' => 'Необходимо указать текст сообщения',
-            'name.required' => 'Укажите, как к вам обращаться'
-        ]);
+//        $request->validate([
+//            'phone' => 'required|string',
+//            'message' => 'required|string',
+//            'name' => 'required|string',
+//        ], [
+//            'phone.required' => 'Необходимо указать телефон или другой способ для связи',
+//            'message.required' => 'Необходимо указать текст сообщения',
+//            'name.required' => 'Укажите, как к вам обращаться'
+//        ]);
+        $result = "";
+        if(!$request->filled('phone')) {
+            $result = $result . "<h6 style='color: red'>Не указан способ связи с Вами</h6>";
+        }
 
-        if(Help::create($request->all())) {
-            return "<h5>Ваше сообщение успешно отправлено! Можно закрыть окно</h5>";
+        if(!$request->filled('name')) {
+            $result = $result . "<h6 style='color: red'>Укажите, как к Вам обращаться</h6>";
+        }
+
+//        dd(empty($result));
+        if(empty($result)) {
+            Help::create($request->all());
+            return "<h6 style='color: green'>Ваше сообщение успешно отправлено! Можно закрыть окно</h6>";
         } else {
-            return "При отправке сообщения возникли проблемы!";
+            $result = $result . "<h6 style='color: red'>При отправке сообщения возникли проблемы! Проверьте заполнение полей</h6>";
+            return $result;
         }
     }
     public function export(): \Symfony\Component\HttpFoundation\BinaryFileResponse
