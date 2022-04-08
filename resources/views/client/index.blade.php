@@ -73,48 +73,51 @@
             <!-- Alternating Feature Sections -->
             <div class="relative pt-16 overflow-hidden">
                 <div aria-hidden="true" class="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-gray-100"></div>
-                <div class="relative">
-                    <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense">
-                        <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
+
+
+                <div class="bg-white overflow-hidden">
+                    <div class="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+                        <div class="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
                             <div>
-                                <div class="mt-6">
-                                    <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
-                                        КАК ВСЕ НАЧИНАЛОСЬ
-                                    </h2>
-                                    <h3 class="text-3xl font-extrabold tracking-tight text-gray-900">Создание «Стома Вместе»</h3>
-                                    <p class="mt-4 text-lg text-gray-500">
-                                        В, теперь уже далеком, 2012 году наш Исполнительный директор столкнулась с осложнениями вокруг илеостомы. Куда только не обращалась за помощью, но оказалось, что найти помощь и поддержку с подобным диагнозом не так-то просто. В итоге она попадает в ФГБУ «НМИЦ колопроктологии имени А.Н. Рыжих», где был кабинет стомированных, там ей и оказали квалифицированную помощь, а так же подобрали технические средства реабилитации. После операции по закрытию стомы Татьяна Борисова привезла в Самару новинки технических средств, которых не было в Самаре, для стомированных, передала их в Клиники СамГМУ, а после, не долго думая, поставила цель - создать доступную реабилитацию для стомированных. Так, с 2013 года, она с волонтером Надеждой Блохиной начали ходить по палатам Клиник, и рассказывать об уходе за стомой, раздавая брошюры и средства ухода за стомой на первое время, бесплатно. В 2016 году, благодаря помощи волонтеров: Дмитрия Кайорова, Надежды Блохиной и Милы Кадымовой, появился проект "Стома Вместе", направленный на информационную и психологическую поддержку стомированных. Проект существует и развивается по сей день, так же не без волонтерской помощи.
-                                    </p>
-                                    <div class="mt-6">
-{{--                                        <a href="#" class="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">--}}
-{{--                                            Помочь--}}
-{{--                                        </a>--}}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-8 border-t border-gray-200 pt-6">
-                                <blockquote>
-                                    <div>
-                                        <p class="text-base text-gray-500">
-                                            &ldquo;Стома – не приговор, а стимул к новой жизни&rdquo;
-                                        </p>
-                                    </div>
-                                    <footer class="mt-3">
-                                        <div class="flex items-center space-x-3">
-{{--                                            <div class="flex-shrink-0">--}}
-{{--                                                <img class="h-6 w-6 rounded-full" src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">--}}
-{{--                                            </div>--}}
-                                            <div class="text-base font-medium text-gray-700">
-                                                Исполнительный директор – Татьяна Борисова
-                                            </div>
-                                        </div>
-                                    </footer>
-                                </blockquote>
+                                <h2 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900">КАК ВСЕ НАЧИНАЛОСЬ</h2>
+                                <h3 class="text-3xl font-extrabold tracking-tight text-gray-900">Создание «Стома Вместе»</h3>
                             </div>
                         </div>
-                        <div class="mt-12 sm:mt-16 lg:mt-0">
-                            <div class="pl-4 lg:-mr-48 mr-4 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-                                <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:w-auto lg:max-w-none" src="{{asset('images/promo-1.jpg')}}" alt="Inbox user interface">
+                        <div class="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
+                            <div class="relative lg:row-start-1 lg:col-start-2">
+                                <div class="relative text-base mx-auto max-w-prose lg:max-w-none">
+                                    <figure>
+                                        <div class="aspect-w-12 aspect-h-7 lg:aspect-none">
+                                            <img class="rounded-lg shadow-lg object-cover object-center" src="{{asset('images/promo-1.jpg')}}" alt="" width="1184" height="1376">
+                                        </div>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="mt-8 lg:mt-0">
+                                <div>
+                                    <div class="">
+
+                                        <p class="text-lg text-gray-500">
+                                            В, теперь уже далеком, 2012 году наш Исполнительный директор столкнулась с осложнениями вокруг илеостомы. Куда только не обращалась за помощью, но оказалось, что найти помощь и поддержку с подобным диагнозом не так-то просто. В итоге она попадает в ФГБУ «НМИЦ колопроктологии имени А.Н. Рыжих», где был кабинет стомированных, там ей и оказали квалифицированную помощь, а так же подобрали технические средства реабилитации. После операции по закрытию стомы Татьяна Борисова привезла в Самару новинки технических средств, которых не было в Самаре, для стомированных, передала их в Клиники СамГМУ, а после, не долго думая, поставила цель - создать доступную реабилитацию для стомированных. Так, с 2013 года, она с волонтером Надеждой Блохиной начали ходить по палатам Клиник, и рассказывать об уходе за стомой, раздавая брошюры и средства ухода за стомой на первое время, бесплатно. В 2016 году, благодаря помощи волонтеров: Дмитрия Кайорова, Надежды Блохиной и Милы Кадымовой, появился проект "Стома Вместе", направленный на информационную и психологическую поддержку стомированных. Проект существует и развивается по сей день, так же не без волонтерской помощи.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="mt-8 border-t border-gray-200 pt-6">
+                                    <blockquote>
+                                        <div>
+                                            <p class="text-base text-gray-500">
+                                                &ldquo;Стома – не приговор, а стимул к новой жизни&rdquo;
+                                            </p>
+                                        </div>
+                                        <footer class="mt-3">
+                                            <div class="flex items-center space-x-3">
+                                                <div class="text-base font-medium text-gray-700">
+                                                    Исполнительный директор – Татьяна Борисова
+                                                </div>
+                                            </div>
+                                        </footer>
+                                    </blockquote>
+                                </div>
                             </div>
                         </div>
                     </div>

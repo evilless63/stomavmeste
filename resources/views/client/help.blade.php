@@ -2,28 +2,35 @@
     <div class="bg-white">
         <main>
             <div class="mt-24">
-                <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
-                    <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
-                        <div>
+
+                <div class="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+                    <div class="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
+                        <div class="mt-8 lg:mt-0 lg:row-start-1 lg:col-start-2">
+                            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
+                                Помощь
+                            </h2>
+                            <div class="text-base max-w-prose mx-auto lg:max-w-none">
+                                <p class="text-lg text-gray-500">В благотворительности важна ответственность каждого человека. Поэтому так значимы люди, которые помогают нуждающимся не от имени организации, а от собственной души.</p>
+                            </div>
+                            <p class="mt-4 text-lg text-gray-500">
+                                Когда индивид сталкивается с необходимостью выведения стомы, это может очень дестабилизировать, выбить из привычного уклада жизни. Человек сталкивается с неизвестностью, страхами, финансовыми и другими сложностями. Справиться с таким в одиночку очень сложно. Хорошо, когда есть рядом близкие люди, друзья, но они так же сталкиваются с этим впервые и не знают, что делать. В такие моменты стомированному очень важно узнать, что он не одинок и есть люди, которые преодолели подобное. А еще важнее знать, что есть люди готовые помочь. Ощущение единения очень помогает морально и эмоционально, даёт ресурс справиться со сложной ситуацией. Мы с гордостью можем утверждать, что «Стома Вместе» является таким ресурсным пространством!
+                            </p>
                             <div class="mt-6">
-                                <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
-                                    Помощь
-                                </h2>
-                                <p class="mt-4 text-lg text-gray-500">
-                                    Когда индивид сталкивается с необходимостью выведения стомы, это может очень дестабилизировать, выбить из привычного уклада жизни. Человек сталкивается с неизвестностью, страхами, финансовыми и другими сложностями. Справиться с таким в одиночку очень сложно. Хорошо, когда есть рядом близкие люди, друзья, но они так же сталкиваются с этим впервые и не знают, что делать. В такие моменты стомированному очень важно узнать, что он не одинок и есть люди, которые преодолели подобное. А еще важнее знать, что есть люди готовые помочь. Ощущение единения очень помогает морально и эмоционально, даёт ресурс справиться со сложной ситуацией. Мы с гордостью можем утверждать, что «Стома Вместе» является таким ресурсным пространством!
-                                </p>
-                                <div class="mt-6">
-                                    <a href="#" class="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">
-                                        Сделать пожертование
-                                    </a>
-                                </div>
+                                <a href="#" class="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">
+                                    Сделать пожертование
+                                </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
-                        <div class="pl-4 lg:-mr-48 mr-4 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-                            <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:w-auto lg:max-w-none" src="{{asset('images/help.jpg')}}" alt="Customer profile user interface">
+                        <div class="relative ">
+                            <div class="relative text-base mx-auto max-w-prose lg:max-w-none">
+                                <figure>
+                                    <div class="aspect-w-12 aspect-h-7 lg:aspect-none">
+                                        <img class="rounded-lg shadow-lg object-cover object-center" src="{{asset('images/help.jpg')}}" alt="" width="1184" height="1376">
+                                    </div>
+                                </figure>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
