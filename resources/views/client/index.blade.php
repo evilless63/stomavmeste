@@ -55,13 +55,13 @@
                             <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
                                 <p>
                                     <span class="block text-2xl font-bold text-gray-900">31%</span>
-                                    <span class="mt-1 block text-base text-gray-900"><span class="font-medium text-gray-900">Опрошенных</span> опрошенных стомированных были проинформированы куда обращаться по вопросам реабилитации.</span>
+                                    <span class="mt-1 block text-base text-gray-900"><span class="font-medium text-gray-900">Опрошенных</span> стомированных были проинформированы куда обращаться по вопросам реабилитации.</span>
                                 </p>
                             </div>
                             <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
                                 <p>
                                     <span class="block text-2xl font-bold text-gray-900">47%</span>
-                                    <span class="mt-1 block text-base text-gray-900"><span class="font-medium text-gray-900">Опрошенных</span> опрошенных признались, что стома влияет на психологическое состояние.</span>
+                                    <span class="mt-1 block text-base text-gray-900"><span class="font-medium text-gray-900">Опрошенных</span> признались, что стома влияет на психологическое состояние.</span>
                                 </p>
                             </div>
 
